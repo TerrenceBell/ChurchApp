@@ -1,1 +1,2 @@
 Welcome to the church communication app! This is an app designed to connect people from across the world is a positive space of like minded people that desire to strengthen their relationship with God, share prayers and words of encouragement. This app is still under delvelopment and many more changes will come in the future to increase aesthetics and functionality! # Church-Communication-app
+# ChurchApp
