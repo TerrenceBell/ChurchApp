@@ -1,0 +1,31 @@
+<% if @user && @user.errors %>
+<% @user.errors.full_messages.each do |error| %>
+    <p class="error"><%=error%></p>
+    <% end %>
+    <% end %>
+
+
+
+<h1>After signing up your name is automatically entered into our weekly prayer box!</h1>
+<h3>Sign Up</h3>
+
+
+
+<form action="/users" method="POST">
+    <label>Name:</label><br />
+    <input type="text" name="name"><br />
+
+    <label>Email:</label><br />
+    <input type="text" name="email"><br />
+
+    <label>Password:</label><br />
+    <input type="password" name="password"><br />
+
+    <label>Church Home:</label><br />
+    <input type="text" name="church_home"><br />
+
+    <label>Favorite scripture:</label><br />
+    <textarea name="favorite_scripture"></textarea><br />
+    
+	<input type="submit" value="Sign Up">
+</form>

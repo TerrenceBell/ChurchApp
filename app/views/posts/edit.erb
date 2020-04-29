@@ -1,0 +1,12 @@
+<h1>You can edit your post here</h1>
+
+<form method="POST" action="/posts/<%= @post.id%>">
+<input type="hidden" id="hidden" name="_method" value="PATCH">
+Topic:<input type="text" name="title">
+<br />
+Enter text here:<textarea name="body"></textarea>
+<input type="submit" value="Submit">
+
+</form>
+
+
