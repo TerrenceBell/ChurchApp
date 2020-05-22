@@ -1,13 +1,6 @@
 class PostsController < ApplicationController
-    #binding.pry
-    get '/posts' do
-        not_logged_in
-        if current_user.posts != []
-          @user_posts = current_user.posts.all
-        end
-        @posts = Post.all
-        erb :"posts/index"
-      end
+  git 
+
 
     get '/posts/new' do 
         not_logged_in

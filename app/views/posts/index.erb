@@ -2,20 +2,24 @@
 <h2>Click <a href="posts/new">here</a> to create a post.</h2>
 
 
- <% if @user_posts %>
+<% if !@user_posts%>
+<h2>You don't have any posts yet</h2>
+<%else%>
+
 <h2>Here are all of your post</h2>
-  <ul>
-  <% @user_posts.each do |post| %>
-  <li><a href="posts/<%=post.id%>"><%= post.title %> </a></li>
-  <% end %>
+ <ul>
+ <% @user_posts.each do |post| %>
+ <li><a href="posts/<%=post.id%>"><%= post.title %> </a></li>
+ <% end %>
 </ul>
 <% end %>
 
 
-<h2>Here are all your posts</h2>
+<h2>Here is what everyone else has posted</h2>
 
 <ul>
-<% @posts.each do |post| %>
+
+<% @not_user_posts.each do |post| %>
   <li><a href="posts/<%=post.id%>"><%= post.title %> </a></li>
-<% end %>
-</ul>
+ <% end %>
+ </ul>
