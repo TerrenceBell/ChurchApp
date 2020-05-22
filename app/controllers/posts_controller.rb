@@ -1,5 +1,14 @@
 class PostsController < ApplicationController
-  git 
+
+  get '/posts' do
+    not_logged_in
+    if current_user.posts != []
+      @user_posts = current_user.posts.all
+    end
+    @posts = Post.all
+    @not_user_posts = @posts - @user_posts
+    erb :"posts/index"
+  end
 
 
     get '/posts/new' do 
